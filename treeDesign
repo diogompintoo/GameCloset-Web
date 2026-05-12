@@ -1,0 +1,14 @@
+com.gamecloset.gamecloset_web
+│
+├── controller
+│     └── GameController
+├── service
+│     └── GameService
+├── repository
+│     └── GameRepository
+├── model
+│     └── Game
+├── dto
+├── config
+├── exception
+└── GameclosetWebApplication
