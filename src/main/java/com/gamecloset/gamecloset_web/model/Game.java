@@ -19,7 +19,7 @@ public class Game {
     @NotBlank
     private String platform;
 
-    private int year;
+    private int releaseYear;
 
     private String condition;
 
@@ -32,7 +32,7 @@ public class Game {
         this.title = title;
         this.genre = genre;
         this.platform = platform;
-        this.year = year;
+        this.releaseYear = year;
         this.condition = condition;
         this.price = price;
     }
@@ -42,7 +42,7 @@ public class Game {
     public String getTitle() { return title; }
     public String getGenre() { return genre; }
     public String getPlatform() { return platform; }
-    public int getYear() { return year; }
+    public int getReleaseYear() { return releaseYear; }
     public String getCondition() { return condition; }
     public double getPrice() { return price; }
 
@@ -50,7 +50,7 @@ public class Game {
     public void setTitle(String title) { this.title = title; }
     public void setGenre(String genre) { this.genre = genre; }
     public void setPlatform(String platform) { this.platform = platform; }
-    public void setYear(int year) { this.year = year; }
+    public void setReleaseYear(int year) { this.releaseYear = year; }
     public void setCondition(String condition) { this.condition = condition; }
     public void setPrice(double price) { this.price = price; }
 }
