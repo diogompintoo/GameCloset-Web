@@ -6,6 +6,7 @@ import com.gamecloset.gamecloset_web.Service.GameService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
 public class GameController {
 
@@ -16,8 +17,12 @@ public class GameController {
 
     @GetMapping("/")
     public String home (Model model) {
+        List<Game> games = gameService.findAll();
+
+
         model.addAttribute("games", gameService.findAll());
         model.addAttribute("totalGames", gameService.findAll().size());
+
         return "index";
     }
 
