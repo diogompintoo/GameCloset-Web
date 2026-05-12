@@ -11,33 +11,33 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "Title is required")
     private String title;
 
     private String genre;
 
-    @NotBlank
+    @NotBlank(message = "Platform is required")
     private String platform;
 
     private int releaseYear;
 
     private String condition;
 
-    @Positive
+    @Positive(message = "Price must be greater than zero")
     private double price;
 
     public Game() {}
 
-    public Game(String title, String genre, String platform, int year, String condition, double price) {
+    public Game(String title, String genre, String platform, int releaseYear, String condition, double price) {
         this.title = title;
         this.genre = genre;
         this.platform = platform;
-        this.releaseYear = year;
+        this.releaseYear = releaseYear;
         this.condition = condition;
         this.price = price;
     }
 
-    // Getters e Setters
+    //GETTERS
     public Long getId() { return id; }
     public String getTitle() { return title; }
     public String getGenre() { return genre; }
@@ -46,11 +46,12 @@ public class Game {
     public String getCondition() { return condition; }
     public double getPrice() { return price; }
 
+    //SETTERS
     public void setId(Long id) { this.id = id; }
     public void setTitle(String title) { this.title = title; }
     public void setGenre(String genre) { this.genre = genre; }
     public void setPlatform(String platform) { this.platform = platform; }
-    public void setReleaseYear(int year) { this.releaseYear = year; }
+    public void setReleaseYear(int releaseYear) { this.releaseYear = releaseYear; }
     public void setCondition(String condition) { this.condition = condition; }
     public void setPrice(double price) { this.price = price; }
 }
